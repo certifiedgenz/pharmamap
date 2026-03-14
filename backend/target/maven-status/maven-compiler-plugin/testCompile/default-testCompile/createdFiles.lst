@@ -1,0 +1,4 @@
+com\pharmamap\backend\integration\InventoryIntegrationTest.class
+com\pharmamap\backend\integration\SearchIntegrationTest.class
+com\pharmamap\backend\integration\AdminIntegrationTest.class
+com\pharmamap\backend\integration\AuthIntegrationTest.class
