@@ -1,0 +1,16 @@
+INSERT IGNORE INTO medicines (id, name, brand_name, salt_name, strength, form, manufacturer, prescription_required, created_at) VALUES
+(1, 'Paracetamol 500mg Tablet', 'Crocin', 'Paracetamol', '500mg', 'Tablet', 'GSK', 0, NOW()),
+(2, 'Amoxicillin 250mg Capsule', 'Amoxil', 'Amoxicillin', '250mg', 'Capsule', 'Pfizer', 1, NOW()),
+(3, 'Ibuprofen 400mg Tablet', 'Advil', 'Ibuprofen', '400mg', 'Tablet', 'Haleon', 0, NOW()),
+(4, 'Cetirizine 10mg Tablet', 'Zyrtec', 'Cetirizine', '10mg', 'Tablet', 'J&J', 0, NOW()),
+(5, 'Azithromycin 500mg Tablet', 'Zithromax', 'Azithromycin', '500mg', 'Tablet', 'Pfizer', 1, NOW()),
+(6, 'Omeprazole 20mg Capsule', 'Prilosec', 'Omeprazole', '20mg', 'Capsule', 'AstraZeneca', 0, NOW()),
+(7, 'Aspirin 75mg Tablet', 'Ecosprin', 'Aspirin', '75mg', 'Tablet', 'USV', 0, NOW()),
+(8, 'Metformin 500mg Tablet', 'Glycomet', 'Metformin', '500mg', 'Tablet', 'USV', 1, NOW()),
+(9, 'Amlodipine 5mg Tablet', 'Amlokind', 'Amlodipine', '5mg', 'Tablet', 'Mankind', 1, NOW()),
+(10, 'Atorvastatin 10mg Tablet', 'Lipitor', 'Atorvastatin', '10mg', 'Tablet', 'Pfizer', 1, NOW()),
+(11, 'Pantoprazole 40mg Tablet', 'Pantocid', 'Pantoprazole', '40mg', 'Tablet', 'Sun Pharma', 1, NOW()),
+(12, 'Levocetirizine 5mg Tablet', 'Xyzal', 'Levocetirizine', '5mg', 'Tablet', 'Dr Reddys', 0, NOW()),
+(13, 'Vitamin C 500mg Tablet', 'Limcee', 'Ascorbic Acid', '500mg', 'Tablet', 'Abbott', 0, NOW()),
+(14, 'Dolo 650 Tablet', 'Dolo', 'Paracetamol', '650mg', 'Tablet', 'Micro Labs', 0, NOW()),
+(15, 'Montelukast 10mg Tablet', 'Singulair', 'Montelukast', '10mg', 'Tablet', 'Merck', 1, NOW());
