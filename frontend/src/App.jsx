@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import SearchResults from './pages/SearchResults';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import PharmacyRegistration from './pages/PharmacyRegistration';
 
 // Protected Route Wrapper for Pharmacy Dashboard
 const ProtectedRoute = ({ children }) => {
@@ -33,6 +34,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/search" element={<SearchResults />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<PharmacyRegistration />} />
               
               {/* Protected Routes */}
               <Route 

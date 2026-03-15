@@ -43,6 +43,30 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const register = async (payload) => {
+    try {
+      // Force PHARMACY role silently within payload mapping
+      const registrationPayload = { ...payload, role: 'PHARMACY' };
+      const response = await API.post('/auth/register', registrationPayload);
+      const { token, role, email: userEmail } = response.data.data;
+      
+      // Save globally
+      localStorage.setItem('token', token);
+      localStorage.setItem('userEmail', userEmail);
+      localStorage.setItem('userRole', role);
+      
+      setUser({ email: userEmail, role });
+      setIsAuthenticated(true);
+      return { success: true };
+    } catch (error) {
+      console.error("Registration failed", error);
+      return { 
+        success: false, 
+        message: error.response?.data?.message || 'Registration failed. Please check your inputs.' 
+      };
+    }
+  };
+
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('userEmail');
@@ -53,7 +77,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated, loading, login, logout }}>
+    <AuthContext.Provider value={{ user, isAuthenticated, loading, login, register, logout }}>
       {children}
     </AuthContext.Provider>
   );

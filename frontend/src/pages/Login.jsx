@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Lock, Mail, AlertCircle } from 'lucide-react';
 
@@ -92,6 +92,15 @@ const Login = () => {
                 {loading ? <span className="spinner-border spinner-border-sm me-2"></span> : null}
                 {loading ? 'Authenticating...' : 'Sign In securely'}
               </button>
+              
+              <div className="text-center mt-4 border-top pt-3">
+                <p className="text-muted small mb-0">
+                  Are you a new pharmacy? 
+                  <Link to="/register" className="text-primary fw-bold text-decoration-none ms-1 hover-underline">
+                    Register your store
+                  </Link>
+                </p>
+              </div>
             </form>
           </div>
         </div>
